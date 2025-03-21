@@ -1,6 +1,6 @@
 {
 	"name": "savelifefoundation",	
-	"image": "mcr.microsoft.com/devcontainers/base:alpine-3.20",
+	"image": "node:22-alpine",
 	"remoteUser": "root",
 
 	"postCreateCommand": "/bin/sh /workspaces/savelifefoundation/.devcontainer/setup.sh"
