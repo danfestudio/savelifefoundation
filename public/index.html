@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('templates/head') %>
+<head>    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="chetanbudathoki">
+    <meta name="description" content="Save Life Foundation">
+    
+    <title>Save Life Foundation</title>
+    
+    <link rel="shortcut icon" href="/static/img/favicon.png">   
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="/static/css/all.min.css">    
+    <link rel="stylesheet" href="/static/css/animate.css">    
+    <link rel="stylesheet" href="/static/css/meanmenu.css">    
+    <link rel="stylesheet" href="/static/css/swiper-bundle.min.css">    
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
 
 <body>
 
-    <%- include('templates/preloader') %>
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">
+            </div>
+            <div class="txt-loading">
+                <span data-text-preloader="S" class="letters-loading">
+                    S
+                </span>
+                <span data-text-preloader="A" class="letters-loading">
+                    A
+                </span>
+                <span data-text-preloader="V" class="letters-loading">
+                    V
+                </span>
+                <span data-text-preloader="E" class="letters-loading">
+                    E
+                </span>
+                <span data-text-preloader="L" class="letters-loading">
+                    L
+                </span>
+                <span data-text-preloader="I" class="letters-loading">
+                    I
+                </span>
+                <span data-text-preloader="F" class="letters-loading">
+                    F
+                </span>
+                <span data-text-preloader="E" class="letters-loading">
+                    E
+                </span>                
+            </div>
+            <p class="text-center">Foundation</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Mouse Cursor Start -->
     <div class="mouse-cursor cursor-outer"></div>
@@ -24,7 +88,7 @@
                     <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                         <div class="offcanvas__logo">
                             <a href="index.html">
-                                <img src="assets/img/logo/white-logo.svg" alt="logo-img">
+                                <img src="/static/img/logo/white-logo.svg" alt="logo-img">
                             </a>
                         </div>
                         <div class="offcanvas__close">
@@ -94,8 +158,8 @@
     <div class="offcanvas__overlay"></div>
 
     <!-- Header Section Start -->
-    <%- include('templates/header') %>
-
+    
+    {{ template "header" . }}
 
     <!-- Banner Section   S T A R T -->
     <section class="banner-section fix section-padding1 bg-theme">
@@ -112,12 +176,12 @@
 
                 <div class="banner-thumb-area">                  
                     <div class="thumb-wrapper  image-anime">
-                        <img src="assets/img/about/group-photo.jpg" alt="thumb">
+                        <img src="/static/img/about/group-photo.jpg" alt="thumb">
                     </div>
                     <div class="thumb-wrapper2">
-                        <div class="thumb  image-anime"><img src="assets/img/about/gonation-photo.jpg" alt="thumb">
+                        <div class="thumb  image-anime"><img src="/static/img/about/gonation-photo.jpg" alt="thumb">
                         </div>
-                        <div class="thumb  image-anime"><img src="assets/img/about/donation-2.jpg" alt="thumb">
+                        <div class="thumb  image-anime"><img src="/static/img/about/donation-2.jpg" alt="thumb">
                         </div>
                     </div>
                 </div>
@@ -125,7 +189,7 @@
                 <div class="banner-service-area">
                     <div class="service-item style1">
                         <div class="card-body">
-                            <div class="icon"><img src="assets/img/icon/serviceIcon1_1.svg" alt="svg icon">
+                            <div class="icon"><img src="/static/img/icon/serviceIcon1_1.svg" alt="svg icon">
                             </div>
                             <h3 class="title">Become A Volunteer</h3>
                             <p class="text">When deciding which charity to donate to, it important to do your
@@ -136,7 +200,7 @@
                     </div>
                     <div class="service-item style1">
                         <div class="card-body">
-                            <div class="icon"><img src="assets/img/icon/serviceIcon1_1.svg" alt="svg icon">
+                            <div class="icon"><img src="/static/img/icon/serviceIcon1_1.svg" alt="svg icon">
                             </div>
                             <h3 class="title">Donate Now</h3>
                             <p class="text">When deciding which charity to donate to, it important to do your
@@ -147,7 +211,7 @@
                     </div>
                     <div class="service-item style1">
                         <div class="card-body">
-                            <div class="icon"><img src="assets/img/icon/serviceIcon1_1.svg" alt="svg icon">
+                            <div class="icon"><img src="/static/img/icon/serviceIcon1_1.svg" alt="svg icon">
                             </div>
                             <h3 class="title">Education For All</h3>
                             <p class="text">When deciding which charity to donate to, it important to do your
@@ -158,7 +222,7 @@
                     </div>
                     <div class="service-item style1">
                         <div class="card-body">
-                            <div class="icon"><img src="assets/img/icon/serviceIcon1_1.svg" alt="svg icon">
+                            <div class="icon"><img src="/static/img/icon/serviceIcon1_1.svg" alt="svg icon">
                             </div>
                             <h3 class="title">Medical Facilities</h3>
                             <p class="text">When deciding which charity to donate to, it important to do your
@@ -185,16 +249,16 @@
                                 </div>
                                 <span>Years of Experience</span>
                             </div>
-                            <img src="assets/img/about/about-photo.jpg" alt="thumb" data-tilt data-tilt-max="20">
+                            <img src="/static/img/about/about-photo.jpg" alt="thumb" data-tilt data-tilt-max="20">
                             <div class="about-mask-img"> 
-                                <img src="assets/img/about/aboutThumb1_2.png" alt="thumb">
+                                <img src="/static/img/about/aboutThumb1_2.png" alt="thumb">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12 col-xl-6">
                         <div class="section-title text-center">
                             <div class="subtitle text-start wow fadeInUp" data-wow-delay=".5s"> <span class="mr-7">
-                                    <img src="assets/img/icon/starIcon.jpg" alt="icon"></span>About Us </div>
+                                    <img src="/static/img/icon/starIcon.jpg" alt="icon"></span>About Us </div>
                             <h2 class="mt-15 text-start wow fadeInUp" data-wow-delay=".3s">The foundation emphases on
                                 <span>providing proper education and a better future </span>for the children.
                             </h2>
@@ -207,7 +271,7 @@
                         <div class="fancy-box-wrapper">
                             <div class="fancy-box style3 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="item">
-                                    <img src="assets/img/icon/aboutIcon1_1.svg" alt="icon">
+                                    <img src="/static/img/icon/aboutIcon1_1.svg" alt="icon">
                                 </div>
                                 <div class="item">
                                     <h6 class="title">Volunteers Engaged</h6>
@@ -216,7 +280,7 @@
                             </div>
                             <div class="fancy-box style3 wow fadeInUp" data-wow-delay=".5s">
                                 <div class="item">
-                                    <img src="assets/img/icon/aboutIcon1_2.svg" alt="icon">
+                                    <img src="/static/img/icon/aboutIcon1_2.svg" alt="icon">
                                 </div>
                                 <div class="item">
                                     <h6 class="title">Total Funds Raised</h6>
@@ -225,7 +289,7 @@
                             </div>
                             <div class="fancy-box style3 wow fadeInUp" data-wow-delay=".8s">
                                 <div class="item">
-                                    <img src="assets/img/icon/aboutIcon1_3.svg" alt="icon">
+                                    <img src="/static/img/icon/aboutIcon1_3.svg" alt="icon">
                                 </div>
                                 <div class="item">
                                     <h6 class="title">Students Reached</h6>
@@ -246,7 +310,7 @@
                 <div class="section-title-area">
                     <div class="section-title text-center">
                         <div class="subtitle text-start wow fadeInUp" data-wow-delay=".5s"> <span class="mr-7">
-                                <img src="assets/img/icon/starIcon.jpg" alt="icon"></span> Our Causes </div>
+                                <img src="/static/img/icon/starIcon.jpg" alt="icon"></span> Our Causes </div>
                         <h2 class="mt-15 wow fadeInUp" data-wow-delay=".3s">Popular <span>Causes</span></h2>
                     </div>
                     <div class="btn-wrapper mr-44">
@@ -258,7 +322,7 @@
                 <div class="causes-card-wrapper style1">
                     <div class="causes-card-item style1 wow fadeInUp" data-wow-delay=".2s">
                         <div class="causes-image  image-anime">
-                            <img src="assets/img/causes/causesThumb1_1.jpg" alt="thumb">
+                            <img src="/static/img/causes/causesThumb1_1.jpg" alt="thumb">
                             <div class="badge"><a href="causes-details.html">DONATE NOW</a></div>
                         </div>
                         <div class="causes-content">
@@ -290,7 +354,7 @@
                     </div>
                     <div class="causes-card-item style1 wow fadeInUp" data-wow-delay=".4s">
                         <div class="causes-image  image-anime">
-                            <img src="assets/img/causes/causesThumb1_2.jpg" alt="thumb">
+                            <img src="/static/img/causes/causesThumb1_2.jpg" alt="thumb">
                             <div class="badge"><a href="causes-details.html">DONATE NOW</a></div>
                         </div>
                         <div class="causes-content">
@@ -322,7 +386,7 @@
                     </div>
                     <div class="causes-card-item style1 wow fadeInUp" data-wow-delay=".6s">
                         <div class="causes-image  image-anime">
-                            <img src="assets/img/causes/causesThumb1_3.jpg" alt="thumb">
+                            <img src="/static/img/causes/causesThumb1_3.jpg" alt="thumb">
                             <div class="badge"><a href="causes-details.html">DONATE NOW</a></div>
                         </div>
                         <div class="causes-content">
@@ -397,7 +461,7 @@
             <div class="container">
                 <div class="section-title text-center">
                     <div class="subtitle text-center wow fadeInUp" data-wow-delay=".5s"> <span class="mr-7">
-                            <img src="assets/img/icon/starIcon.png" alt="icon"></span>Testimonials</div>
+                            <img src="/static/img/icon/starIcon.png" alt="icon"></span>Testimonials</div>
                     <h2 class="mt-15 wow fadeInUp" data-wow-delay=".3s">What They’re<span> Saying </span></h2>
                 </div>
                 <div class="slider-area">
@@ -419,7 +483,7 @@
                                         but also inspired me to give back to my community.</p>
                                     <div class="fancy-box style2">
                                         <div class="item">
-                                            <img src="assets/img/testimonial/testimonialThumb1_1.jpg" alt="img">
+                                            <img src="/static/img/testimonial/testimonialThumb1_1.jpg" alt="img">
                                         </div>
                                         <div class="item">
                                             <h4 class="title">Esther Howard</h4>
@@ -447,7 +511,7 @@
                                         the impact of our collective efforts is incredibly rewarding.</p>
                                     <div class="fancy-box style2">
                                         <div class="item">
-                                            <img src="assets/img/testimonial/testimonialThumb1_2.jpg" alt="img">
+                                            <img src="/static/img/testimonial/testimonialThumb1_2.jpg" alt="img">
                                         </div>
                                         <div class="item">
                                             <h4 class="title">Masirul Richard</h4>
@@ -475,7 +539,7 @@
                                         but also inspired me to give back to my community.</p>
                                     <div class="fancy-box style2">
                                         <div class="item">
-                                            <img src="assets/img/testimonial/testimonialThumb1_1.jpg" alt="img">
+                                            <img src="/static/img/testimonial/testimonialThumb1_1.jpg" alt="img">
                                         </div>
                                         <div class="item">
                                             <h4 class="title">Esther Howard</h4>
@@ -503,7 +567,7 @@
                                         the impact of our collective efforts is incredibly rewarding.</p>
                                     <div class="fancy-box style2">
                                         <div class="item">
-                                            <img src="assets/img/testimonial/testimonialThumb1_2.jpg" alt="img">
+                                            <img src="/static/img/testimonial/testimonialThumb1_2.jpg" alt="img">
                                         </div>
                                         <div class="item">
                                             <h4 class="title">Masirul Richard</h4>
@@ -530,15 +594,15 @@
     <section class="donation-section fix section-padding bg-theme">
         <div class="donation-wrapper style1">
             <div class="container">
-                <div class="shape1_1 cir36 d-none d-xxl-block"><img src="assets/img/icon/starIcon1.png" alt="icon">
+                <div class="shape1_1 cir36 d-none d-xxl-block"><img src="/static/img/icon/starIcon1.png" alt="icon">
                 </div>
-                <div class="shape1_2 cir36 d-none d-xxl-block"><img src="assets/img/icon/starIcon2.png" alt="icon">
+                <div class="shape1_2 cir36 d-none d-xxl-block"><img src="/static/img/icon/starIcon2.png" alt="icon">
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="section-title text-center">
                             <div class="subtitle text-center text-white wow fadeInUp" data-wow-delay=".5s">
-                                <span class="mr-7"> <img src="assets/img/icon/starIcon.png" alt="icon"></span>Donations
+                                <span class="mr-7"> <img src="/static/img/icon/starIcon.png" alt="icon"></span>Donations
                                 us
                             </div>
                             <h2 class="mt-15 text-white wow fadeInUp" data-wow-delay=".3s">Every dollar counts:
@@ -628,7 +692,7 @@
             <div class="section-title-area">
                 <div class="section-title text-center">
                     <div class="subtitle text-start wow fadeInUp" data-wow-delay=".5s"> <span class="mr-7"> <img
-                                src="assets/img/icon/starIcon.jpg" alt="icon"></span> Our Team </div>
+                                src="/static/img/icon/starIcon.jpg" alt="icon"></span> Our Team </div>
                     <h2 class="mt-15 wow fadeInUp" data-wow-delay=".3s">Our <span>Volunteers</span></h2>
                 </div>
                 <div class="btn-wrapper mr-44">
@@ -640,7 +704,7 @@
                 <div class="col-md-6 col-lg-4 col-xl-3">
                     <div class="team-card-items style1">
                         <div class="team-image image-anime">
-                            <img class="team-mask-img"  src="assets/img/team/teamThumb1_1.png" alt="Thumb">
+                            <img class="team-mask-img"  src="/static/img/team/teamThumb1_1.png" alt="Thumb">
                             <div class="social-profile">
                                 <ul>
                                     <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
@@ -661,7 +725,7 @@
                 <div class="col-md-6 col-lg-4 col-xl-3">
                     <div class="team-card-items style1">
                         <div class="team-image   image-anime">
-                            <img class="team-mask-img"  src="assets/img/team/teamThumb1_2.png" alt="Thumb">
+                            <img class="team-mask-img"  src="/static/img/team/teamThumb1_2.png" alt="Thumb">
                             <div class="social-profile">
                                 <ul>
                                     <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
@@ -682,7 +746,7 @@
                 <div class="col-md-6 col-lg-4 col-xl-3">
                     <div class="team-card-items style1">
                         <div class="team-image  image-anime">
-                            <img class="team-mask-img"  src="assets/img/team/teamThumb1_3.png" alt="Thumb">
+                            <img class="team-mask-img"  src="/static/img/team/teamThumb1_3.png" alt="Thumb">
                             <div class="social-profile">
                                 <ul>
                                     <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
@@ -704,7 +768,7 @@
                 <div class="col-md-6 col-lg-4 col-xl-3">
                     <div class="team-card-items style1">
                         <div class="team-image  image-anime">
-                            <img class="team-mask-img"  src="assets/img/team/teamThumb1_4.png" alt="Thumb">
+                            <img class="team-mask-img"  src="/static/img/team/teamThumb1_4.png" alt="Thumb">
                             <div class="social-profile">
                                 <ul>
                                     <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
@@ -734,7 +798,7 @@
                 <div class="col-xl-5">
                     <div class="section-title text-center">
                         <div class="subtitle text-start wow fadeInUp" data-wow-delay=".5s"> <span class="mr-7">
-                                <img src="assets/img/icon/starIcon.jpg" alt="icon"></span>Faq </div>
+                                <img src="/static/img/icon/starIcon.jpg" alt="icon"></span>Faq </div>
                         <h2 class="mt-15 text-start wow fadeInUp" data-wow-delay=".3s">Your questions <br>
                             <span>answered.</span>
                         </h2>
@@ -832,7 +896,7 @@
             <div class="section-title-area">
                 <div class="section-title text-center">
                     <div class="subtitle text-start wow fadeInUp" data-wow-delay=".5s"> <span class="mr-7"> <img
-                                src="assets/img/icon/starIcon.jpg" alt="icon"></span> Our Blog </div>
+                                src="/static/img/icon/starIcon.jpg" alt="icon"></span> Our Blog </div>
                     <h2 class="mt-15 wow fadeInUp" data-wow-delay=".3s">Our Latest <span>Articles</span></h2>
                 </div>
                 <div class="btn-wrapper mr-44">
@@ -845,8 +909,8 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                     <div class="blog-card-items">
                         <div class="blog-image">
-                            <img src="assets/img/blog/blogThumb1_1.jpg" alt="img">
-                            <img src="assets/img/blog/blogThumb1_1.jpg" alt="img">
+                            <img src="/static/img/blog/blogThumb1_1.jpg" alt="img">
+                            <img src="/static/img/blog/blogThumb1_1.jpg" alt="img">
                         </div>
                         <div class="blog-content">
                             <ul>
@@ -871,8 +935,8 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
                     <div class="blog-card-items">
                         <div class="blog-image">
-                            <img src="assets/img/blog/blogThumb1_2.jpg" alt="img">
-                            <img src="assets/img/blog/blogThumb1_2.jpg" alt="img">
+                            <img src="/static/img/blog/blogThumb1_2.jpg" alt="img">
+                            <img src="/static/img/blog/blogThumb1_2.jpg" alt="img">
                         </div>
                         <div class="blog-content">
                             <ul>
@@ -896,8 +960,8 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
                     <div class="blog-card-items">
                         <div class="blog-image">
-                            <img src="assets/img/blog/blogThumb1_3.jpg" alt="img">
-                            <img src="assets/img/blog/blogThumb1_3.jpg" alt="img">
+                            <img src="/static/img/blog/blogThumb1_3.jpg" alt="img">
+                            <img src="/static/img/blog/blogThumb1_3.jpg" alt="img">
                         </div>
                         <div class="blog-content">
                             <ul>
@@ -922,14 +986,18 @@
         </div>
     </section>
 
-    <!-- Footer Section    S T A R T -->
-    <%- include('templates/footer') %>
-
-    <%- include('templates/scripts') %>
-
-
-
-    
+    {{ template "footer" . }}
+   
+    <script src="/static/js/jquery-3.7.1.min.js"></script>    
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/jquery.waypoints.js"></script>  
+    <script src="/static/js/jquery.counterup.min.js"></script>
+    <script src="/static/js/viewport.jquery.js"></script>    
+    <script src="/static/js/tilt.min.js"></script>    
+    <script src="/static/js/swiper-bundle.min.js"></script>    
+    <script src="/static/js/jquery.meanmenu.min.js"></script>   
+    <script src="/static/js/wow.min.js"></script>    
+    <script src="/static/js/main.js"></script>
 </body>
 
 </html>
